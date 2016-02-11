@@ -29,7 +29,6 @@ function addProjectDetails(e) {
 	console.log("User clicked on project " + idNumber);
 
 	$.get('/project/' + idNumber, addProject);
-	console.log('/project/' + idNumber);
 }
 
 function addProject(result) {
@@ -51,10 +50,10 @@ function randomizeColors(e) {
 	console.log("User clicked on color button");
 	e.preventDefault();
 
-	$.get('/palette', addColors);
+	$.get('/palette', changeColors);
 }
 
-function addColors(result) {
+function changeColors(result) {
 	console.log(result);
 	var colors = result['colors']['hex'];
 
